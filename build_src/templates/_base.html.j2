@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TODO: Favicon -->    
+    <title>{% block title %}{{ title }} - som.codes{% endblock %}</title>
+
+    <meta property="og:title" content="{{ title }}">
+
+    {% if description.is_some() -%}
+        <meta name="description" property="og:description" content="{{ description.unwrap() }}">
+    {%- endif %}
+
+    <link rel="stylesheet" href="/assets/inter/inter.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/hljs.css">
+    <link rel="stylesheet" href="/assets/css/dark.css">
+
+    <meta property="og:site_name" content="som.codes">
+    <!-- TODO: og:image -->
+
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+    <main>
+      {% include "components/navbar.html.j2" %}
+
+      <header>
+        {% block header %}
+          <h1>{{ title }}</h1>
+
+          {% if description.is_some() -%}
+            <p>{{ description.unwrap() }}</p>
+          {%- endif %}
+        {% endblock %}
+      </header>
+
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

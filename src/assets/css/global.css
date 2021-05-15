@@ -1,0 +1,238 @@
+:root {
+  --content-width: 88ch;
+  --image-width: 90ch;
+}
+
+::selection {
+  background: var(--accent-translucent);
+}
+
+html { font-family: 'Inter', 'Roboto', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', 'Inter', 'Roboto', sans-serif; }
+}
+
+body {
+  line-height: 1.6em;
+
+  background-color: var(--bg);
+  color: var(--main);
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0 1em;
+  margin-bottom: 6em;
+}
+
+* {
+  color: var(--main);
+  transition: background-color .3s, color .3s;
+}
+
+main {
+  width: 100%;
+  max-width: var(--content-width);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  color: var(--main-strong);
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.4em;
+  padding-bottom: .3em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+strong {
+  color: var(--main-strong);
+  font-weight: 600;
+}
+
+time {
+  color: var(--main-offset);
+}
+
+.footnote {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.blog-posts {
+  padding-left: 0;
+}
+
+.blog-post {
+  display: flex;
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.blog-post time {
+  float: right;
+}
+
+.blog-post article {
+  width: 100%;
+  margin-right: 4ch;
+}
+
+hr {
+  color: var(--main-offset);
+}
+
+header {
+  padding-bottom: 0.65em;
+  border-bottom: 1px solid var(--main-offset);
+}
+
+header p:last-child {
+  margin-bottom: 0;
+}
+
+header + section {
+  margin-top: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main);
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+nav {
+  padding: 1em;
+  margin: 0 -1em;
+  margin-bottom: 2em;
+
+  display: flex;
+}
+
+#nav-title {
+  font-weight: 500;
+}
+
+#nav-title::before {
+  color: var(--accent);
+  content: " ";
+  border-left: 3px solid var(--accent);
+  margin-right: 1ch;
+}
+
+#nav-title a {
+  border-bottom: none;
+  padding: 1em 1em;
+  padding-left: 0;
+}
+
+.nav-link {
+  border-bottom: none;
+  padding: 1em 1em;
+  color: var(--main-strong);
+}
+
+img {
+  background-color: white;
+
+  display: block;
+  margin: 0.75em auto;
+
+  /*
+    Not supported in browsers yet:
+    max-width: min(90vw, var(--image-width));
+  */
+
+  margin-left: calc(-0.5 * (var(--image-width) - var(--content-width)));
+
+  width: auto;
+  max-width: var(--image-width);
+}
+
+/* Until I can figure out how to properly center images of all sizes */
+img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: /* var(--image-width) */ 90ch) {
+  img {
+    max-width: 90vw;
+  }
+}
+
+code {
+  font-family: "SF Mono", "Source Code Pro", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 0.85em;
+  padding: 0.225em;
+  margin: 0 0.25em;
+  border-radius: 4px;
+
+  color: var(--main-strong);
+  background-color: var(--bg-offset);
+}
+
+pre > code {
+  background-color: var(--bg-offset);
+  display: block;
+  border-radius: 0.5em;
+  padding: 1em;
+  line-height: 1.4em;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+@media (max-width: /* var(--content-width) */ 88ch) {
+  pre {
+    border-radius: 4px;
+    white-space: pre;
+    overflow-x: auto;
+    background-color: var(--bg-offset);
+  }
+}
+
+.featured-article {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  
+  padding: 1em;
+  border: 1px solid var(--main-strong);
+  border-radius: .5ch;
+}
+
+.featured-article> *:first-child {
+  margin-top: 0;
+}
+
+.featured-article > *:last-child {
+  margin-bottom: 0;
+}
+
+.footnotes {
+  border-top: 1px solid var(--main-strong);
+  margin-top: 8em;
+}

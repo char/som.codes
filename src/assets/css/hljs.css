@@ -1,0 +1,38 @@
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: var(--hl-comment);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: var(--hl-keyword);
+}
+
+.hljs-function .hljs-keyword, .hljs-built_in {
+  color: var(--hl-builtin);
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type {
+  color: var(--hl-string);
+}
+
+.hljs-number, .hljs-addition {
+  color: var(--hl-number);
+}
+
+.hljs-keyword,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}

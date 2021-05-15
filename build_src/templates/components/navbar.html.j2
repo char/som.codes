@@ -1,0 +1,9 @@
+<nav>
+  <div id="nav-title"><a href="/">som.codes</a></div>
+
+  <div id="nav-links">
+    {% for (title, href) in nav %}
+      <a class="nav-link" href="{{ href }}">{{ title }}</a>
+    {% endfor %}
+  </div>
+</nav>

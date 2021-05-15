@@ -1,0 +1,19 @@
+{% extends "_base.html.j2" %}
+
+{% block head %}
+  <link rel="alternate" type="application/rss+xml" title="Blog posts on som.codes" href="https://som.codes/blog/rss.xml">
+
+  {% let use_math = page.get("use_math".to_string()) -%}
+  {% if use_math.is_some() && use_math.unwrap() == "true" -%}
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  {% endif %}
+{% endblock %}
+
+{% block header %}
+  <h1>{{ title }}</h1>
+  <time>{{ date }}</time>
+{% endblock %}
+
+{% block content %}
+  {{ content|safe }}
+{% endblock %}

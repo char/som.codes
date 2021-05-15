@@ -1,0 +1,17 @@
+:root {
+  --accent: #f16bcc;
+  --accent-translucent: #f16bcc6b;
+
+  --main: #f2f6f8;
+  --main-offset: #9ba8ad;
+  --main-strong: #ffffff;
+
+  --bg-offset: #171617;
+  --bg: #111011;
+
+  --hl-comment: #555c6d;
+  --hl-keyword: #8be9fd;
+  --hl-builtin: #ff79c6;
+  --hl-string: #f1fa8c;
+  --hl-number: #6affb9;
+}

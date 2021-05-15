@@ -1,0 +1,20 @@
+{% extends "_base.html.j2" %}
+
+{% block head -%}
+  <link rel="alternate" type="application/rss+xml" title="Blog posts on som.codes" href="https://som.codes/blog/rss.xml">
+{%- endblock %}
+
+{% block content -%}
+  <ul class="blog-posts">
+    {% for post in blog_posts -%}
+      <li class="blog-post">
+        <article>
+          <a href="/blog/{{ post.date }}/{{ post.slug }}">{{ post.title }}</a> &mdash; 
+          {{ post.description }}
+        </article>
+
+        <time datetime="{{ post.date }}">{{ post.date }}</time>
+      </li>
+    {%- endfor %}
+  </ul>
+{%- endblock %}

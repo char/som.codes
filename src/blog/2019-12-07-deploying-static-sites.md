@@ -3,7 +3,7 @@ title: "Pro Tip: Push-to-deploy git repositories"
 description: "'git push' to the web"
 ---
 
-I recently wrote a [static site generator](https://github.com/videogame-hacker/side) that now powers this site. This means that making a site is pretty easy, but what about putting it online?
+I recently wrote a [static site generator](https://github.com/videogame-hacker/siru) which, incidentally, powers this site. This means that making a site is pretty easy, but what about putting it online?
 
 If you have your own server, you can easily self-host static websites, just point your HTTP server (I use `nginx`), and use this *pro tip*:
 
@@ -19,7 +19,7 @@ Then, we can just point our webserver at this repository to serve the website. T
 
 (**Note:** You probably want to deny access to the `.git` folder of your site, for security reasons. This matters a whole lot more for dynamic sites than static ones, but it's still good to not let people into your commit history if you don't want them to be. An example I remember of abusing `.git` access via web is from the Overwatch: Sombra ARG, where we read the `.git` folder of a PHP application to view the sources.)
 
-I use this option for `anthony.som.codes` - With the remote-linked repo in the `build` folder, a [deploy.sh](https://github.com/videogame-hacker/anthony.som.codes/blob/master/deploy.sh) script does the following:
+I use this option for `som.codes` - With the remote-linked repo in the `build` folder, a [deploy.sh](https://github.com/videogame-hacker/som.codes/blob/master/deploy.sh) script does the following:
 
 ```bash
 rm -rf build/*

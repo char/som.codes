@@ -14,7 +14,7 @@ An adventure with Java bytecode, HotSpot VM internals, `sun.misc.Unsafe`, and th
 
 ## Introduction & Motivation
 
-Hi. I'm Anthony, and for the last three years, I have been the author of [a Java bytecode obfuscator](https://paramorphism.dev). Because of this, I've been messing with the JVM almost daily for a long time, and have built up a **comprehensive** knowledge base of next-to-useless information about an antiquated bytecode interpreter and its accompanying state-of-the-art JIT system, all packaged up to create a platform that powers three billion[^1] devices.
+Hi. I'm Charlotte, and for the last three years, I have been the author of [a Java bytecode obfuscator](https://paramorphism.dev). Because of this, I've been messing with the JVM almost daily for a long time, and have built up a **comprehensive** knowledge base of next-to-useless information about an antiquated bytecode interpreter and its accompanying state-of-the-art JIT system, all packaged up to create a platform that powers three billion[^1] devices.
 
 Today, we're going to be disabling the bytecode verifier using only pure Java.
 

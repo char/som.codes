@@ -123,6 +123,16 @@ a:hover {
   color: var(--accent);
 }
 
+sup a {
+  padding: 0 0.25ch;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+sup a:not(:hover) {
+  border-bottom: none;
+}
+
 nav {
   padding: 1em;
   margin: 0 -1em;

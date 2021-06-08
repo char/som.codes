@@ -57,6 +57,8 @@ pub fn list_blog_posts(ctx: &BuildContext) -> Result<Vec<BlogPost>> {
         }
     }
 
+    posts.sort_by(|a, b| b.date.cmp(&a.date));
+
     Ok(posts)
 }
 

@@ -83,7 +83,7 @@ Anyway, this is shaping up to be really easy.
 
 So, let's take our QR code and turn it into some HOTP secret that I can use with a better OTP application.
 I planned to throw it into my Bitwarden vault[^vaultwarden], but it looks like the Bitwarden client only supports TOTP.
-Anyway, I can sort something out later. I just need a `hotp://` URI, right?
+So, instead, I'm using [FreeOTP](https://freeotp.github.io/), which is a Red Hat project.
 
 Now, the `duo-cli` repo would be perfect, but it doesn't let me decode the QR code straight from the CLI: I have to do it manually, and then *edit the Python script* to set some variables for use.
 
@@ -95,7 +95,7 @@ So now authenticating at Loughborough is as easy as:
 
 1. Building a Rust project that some random student made,
 2. Putting your security-sensitive credentials (as a QR code) into this program,
-3. Letting it spit out a `hotp://` URI,
+3. Letting it spit out an `otpauth://` URI,
 4. Hoping that Duo Mobile doesn't update to a different authentication scheme in the future!
 5. Giving the HOTP URI to an actual OTP management app, and letting it generate codes for you.
 

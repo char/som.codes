@@ -1,7 +1,6 @@
 ---
 title: Circumventing Cisco Duo's Mobile Authenticator App
 description: Mandatory proprietary software? No thanks.
-unlisted: true
 ---
 
 Hi. I'm Charlotte, I'm 20, and I go to [Loughborough University](https://lboro.ac.uk/). Recently, I got an email saying from university's IT Services saying

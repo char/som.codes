@@ -7,14 +7,16 @@
 {% block content -%}
   <ul class="blog-posts">
     {% for post in blog_posts -%}
-      <li class="blog-post">
-        <article>
-          <a href="/blog/{{ post.date }}/{{ post.slug }}/">{{ post.title }}</a> &mdash; 
-          {{ post.description }}
-        </article>
+      {% if !post.unlisted %}
+        <li class="blog-post">
+          <article>
+            <a href="/blog/{{ post.date }}/{{ post.slug }}/">{{ post.title }}</a> &mdash; 
+            {{ post.description }}
+          </article>
 
-        <time datetime="{{ post.date }}">{{ post.date }}</time>
-      </li>
+          <time datetime="{{ post.date }}">{{ post.date }}</time>
+        </li>
+      {% endif %}
     {%- endfor %}
   </ul>
 {%- endblock %}

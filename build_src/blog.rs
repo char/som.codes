@@ -11,12 +11,16 @@ pub struct BlogPost {
     date: String,
     title: String,
     description: String,
+    unlisted: bool,
 }
 
 #[derive(Deserialize)]
 struct BlogPostFrontmatter {
     title: String,
     description: String,
+
+    #[serde(default)]
+    unlisted: bool,
 
     #[serde(default)]
     page: HashMap<String, String>,
@@ -48,6 +52,7 @@ pub fn list_blog_posts(ctx: &BuildContext) -> Result<Vec<BlogPost>> {
                 date: date.to_string(),
                 title: frontmatter.title,
                 description: frontmatter.description,
+                unlisted: frontmatter.unlisted,
             })
         }
     }

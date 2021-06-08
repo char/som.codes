@@ -1,5 +1,5 @@
 :root {
-  --content-width: 88ch;
+  --content-width: 78ch;
   --image-width: 90ch;
 }
 
@@ -14,6 +14,7 @@ html { font-family: 'Inter', 'Roboto', sans-serif; }
 
 body {
   line-height: 1.6em;
+  font-size: 1.125rem;
 
   background-color: var(--bg);
   color: var(--main);
@@ -23,11 +24,6 @@ body {
 
   margin: 0 1em;
   margin-bottom: 6em;
-}
-
-* {
-  color: var(--main);
-  transition: background-color .3s, color .3s;
 }
 
 main {
@@ -123,6 +119,10 @@ a:hover {
   color: var(--accent);
 }
 
+a {
+  transition: color .3s;
+}
+
 sup a {
   padding: 0 0.25ch;
   font-weight: bold;
@@ -216,7 +216,7 @@ pre {
   white-space: pre-wrap;
 }
 
-@media (max-width: /* var(--content-width) */ 88ch) {
+@media (max-width: /* var(--content-width) */ 78ch) {
   pre {
     border-radius: 4px;
     white-space: pre;

@@ -1,3 +1,4 @@
+use chrono::{DateTime, NaiveDate, NaiveTime, Utc};
 use siru::{logging::log_info, prelude::SiruFS};
 
 use crate::{
@@ -13,10 +14,19 @@ fn render_item(ctx: &BuildContext, post: &BlogPost) -> Result<String> {
     let link = &format!("https://som.codes/blog/{}/{}/", post.date, post.slug);
     let (_, content) = render_blog_post(ctx, post)?;
 
+    let date_rfc2822 = DateTime::<Utc>::from_utc(
+        NaiveDate::parse_from_str(&post.date, "%Y-%m-%d")
+            .unwrap()
+            .and_time(NaiveTime::from_hms(0, 0, 0)),
+        Utc,
+    )
+    .to_rfc2822();
+
     Ok(ITEM_TEMPLATE
         .replace("<!-- $LINK -->", &link)
         .replace("<!-- $TITLE -->", &post.title)
         .replace("<!-- $DESCRIPTION -->", &post.description)
+        .replace("<!-- $DATE -->", &date_rfc2822)
         .replace("<!-- $CONTENT -->", &content))
 }
 

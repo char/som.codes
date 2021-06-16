@@ -2,5 +2,6 @@
   <guid><!-- $LINK --></guid>
   <title><!-- $TITLE -->: <!-- $DESCRIPTION --></title>
   <link><!-- $LINK --></link>
+  <pubDate><!-- $DATE --></pubDate>
   <description><![CDATA[<h1><!-- $TITLE --></h1> <!-- $CONTENT -->]]></description>
 </item>

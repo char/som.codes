@@ -1,0 +1,6 @@
+<item>
+  <guid><!-- $LINK --></guid>
+  <title><!-- $TITLE -->: <!-- $DESCRIPTION --></title>
+  <link><!-- $LINK --></link>
+  <description><![CDATA[<h1><!-- $TITLE --></h1> <!-- $CONTENT -->]]></description>
+</item>

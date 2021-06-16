@@ -6,24 +6,24 @@ use regex::Regex;
 use siru::prelude::*;
 
 pub struct BlogPost {
-    file: PathBuf,
-    slug: String,
-    date: String,
-    title: String,
-    description: String,
-    unlisted: bool,
+    pub file: PathBuf,
+    pub slug: String,
+    pub date: String,
+    pub title: String,
+    pub description: String,
+    pub unlisted: bool,
 }
 
 #[derive(Deserialize)]
-struct BlogPostFrontmatter {
-    title: String,
-    description: String,
+pub struct BlogPostFrontmatter {
+    pub title: String,
+    pub description: String,
 
     #[serde(default)]
-    unlisted: bool,
+    pub unlisted: bool,
 
     #[serde(default)]
-    page: HashMap<String, String>,
+    pub page: HashMap<String, String>,
 }
 
 pub fn list_blog_posts(ctx: &BuildContext) -> Result<Vec<BlogPost>> {
@@ -98,6 +98,20 @@ struct BlogPostTemplate<'a> {
     date: &'a str,
     content: &'a str,
     page: &'a HashMap<String, String>,
+}
+
+pub fn render_blog_post(
+    ctx: &BuildContext,
+    post: &BlogPost,
+) -> Result<(BlogPostFrontmatter, String)> {
+    let mut markdown_options = MarkdownOptions::default();
+    markdown_options.render.unsafe_ = true;
+    markdown_options.extension.footnotes = true;
+
+    Ok(render_markdown_with_options::<BlogPostFrontmatter>(
+        &ctx.read(&post.file)?,
+        &markdown_options,
+    )?)
 }
 
 pub fn blog_posts(ctx: &BuildContext) -> Result<()> {

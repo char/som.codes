@@ -6,6 +6,7 @@ mod error_pages;
 mod main_page;
 mod nav;
 mod node_worker;
+mod rss;
 
 use std::{
     convert::TryInto,
@@ -106,6 +107,7 @@ fn main() {
         blog::blog_list,
         blog::blog_posts,
         error_pages::error_pages,
+        rss::blog_rss,
     ]
     .iter()
     .map(|f| {

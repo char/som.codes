@@ -3,10 +3,9 @@ title: som.codes
 description: Java bytecode specialist, videogame cheat developer, polyglot. 20. Undergraduate Computer Science student.
 ---
 
-
 <section id="introduction-section">
 
-I use [they and them pronouns](https://en.wikipedia.org/wiki/Singular_they).
+Charlotte Som (she/they/fae)
 
 Hi there. I write software, basically: I work with low-level JVM stuff for work, and in my free time, I reverse engineer games and write cheats.
 

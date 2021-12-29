@@ -3,7 +3,7 @@ title: Circumventing Cisco Duo's Mobile Authenticator App
 description: Mandatory proprietary software? No thanks.
 ---
 
-Hi. I'm Charlotte, I'm 20, and I go to [Loughborough University](https://lboro.ac.uk/). Recently, I got an email saying from university's IT Services saying
+I go to [Loughborough University](https://lboro.ac.uk/). Recently, I got an email saying from university's IT Services saying
 "hey, we're going to force the use of multi-factor authentication". This is a good idea for security, but the implementation of MFA that they have chosen is subpar.
 
 TL;DR: I don't like to be mandated to run commercial software on my own devices, so I did some reverse engineering and [reimplemented it in the open](https://github.com/videogame-hacker/duo-hotp-export).

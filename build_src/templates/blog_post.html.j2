@@ -11,7 +11,8 @@
 
 {% block header %}
   <h1>{{ title }}</h1>
-  <time>{{ date }}</time>
+  <p><em>{{ description.unwrap_or("") }}</em></p>
+  <p><time>{{ date }}</time></p>
 {% endblock %}
 
 {% block content %}

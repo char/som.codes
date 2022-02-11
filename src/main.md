@@ -1,6 +1,6 @@
 ---
 title: som.codes
-description: Java bytecode specialist, videogame cheat developer, polyglot. 20. Undergraduate Computer Science student.
+description: Java bytecode specialist, videogame cheat developer, polyglot. Undergraduate Computer Science student.
 ---
 
 <section id="introduction-section">

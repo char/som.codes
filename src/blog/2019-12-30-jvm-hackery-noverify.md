@@ -63,7 +63,7 @@ But if we peruse the [Java bytecode instruction listings](https://en.wikipedia.o
 Therefore, we can manipulate our `goto` instruction to jump into the middle of our immediate `short` constant that usually would act as the operand to `sipush`:
 
 <pre><code class="hljs-manual language-javabytecode"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> myWeirdMethod():</span>
-  <span class="hljs-keyword">goto</span> &lt;two bytes forward&gt;
+  <span class="hljs-keyword">goto</span> &lt;four bytes forward&gt;
   <span class="hljs-keyword">sipush</span> <span class="hljs-number">0x06ac</span>
   <span class="hljs-keyword">ireturn</span>
 

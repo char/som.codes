@@ -6,7 +6,7 @@ description: Mandatory proprietary software? No thanks.
 I go to [Loughborough University](https://lboro.ac.uk/). Recently, I got an email saying from university's IT Services saying
 "hey, we're going to force the use of multi-factor authentication". This is a good idea for security, but the implementation of MFA that they have chosen is subpar.
 
-TL;DR: I don't like to be mandated to run commercial software on my own devices, so I did some reverse engineering and [reimplemented it in the open](https://github.com/videogame-hacker/duo-hotp-export).
+TL;DR: I don't like to be mandated to run commercial software on my own devices, so I did some reverse engineering and [reimplemented it in the open](https://github.com/char/duo-hotp-export).
 
 ## Duo Security
 
@@ -86,7 +86,7 @@ So, instead, I'm using [FreeOTP](https://freeotp.github.io/), which is a Red Hat
 
 Now, the `duo-cli` repo would be perfect, but it doesn't let me decode the QR code straight from the CLI: I have to do it manually, and then *edit the Python script* to set some variables for use.
 
-Instead of fixing this minor gripe, I made something Invented Here: [github.com/videogame-hacker/duo-hotp-export](https://github.com/videogame-hacker/duo-hotp-export)
+Instead of fixing this minor gripe, I made something Invented Here: [github.com/char/duo-hotp-export](https://github.com/char/duo-hotp-export)
 
 You can just `cargo run --release -- ./path/to/some/qr/code.png`.
 

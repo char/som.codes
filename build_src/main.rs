@@ -44,7 +44,7 @@ impl SiruFS for BuildContext {
 
 const MIN_HTML_HEADER: &'static str = concat!(
     "<!-- This file is minified, but you can find this site's original source at ",
-    "https://github.com/videogame-hacker/som.codes/",
+    "https://github.com/char/som.codes/",
     " -->\n",
 );
 

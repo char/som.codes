@@ -11,7 +11,7 @@ Hi there. I write software, basically: I work with low-level JVM stuff for work,
 
 Currently, the project that takes up the majority of my time is a Java bytecode obfuscator, so I have become extremely familiar with JVM bytecode.
 
-Also find me on <a href="https://github.com/videogame-hacker/" rel="me">GitHub</a>.
+Also find me on <a href="https://github.com/char/" rel="me">GitHub</a>.
 
 </section>
 <section id="projects-section">
@@ -21,15 +21,15 @@ Also find me on <a href="https://github.com/videogame-hacker/" rel="me">GitHub</
 Sometimes, I like to work on projects. Here are a few, but you can always check my GitHub for other things I release.
 
 - [Paramorphism](https://paramorphism.dev/) &ndash; A JVM bytecode obfuscator targeting Java and Kotlin.
-- [Koffee](https://github.com/videogame-hacker/Koffee) &ndash; A programmable JVM bytecode assembler with macros-for-free via Kotlin.
-- [Aksara](https://github.com/videogame-hacker/Aksara) &ndash; A standalone JVM bytecode assembler.
-- [Wonseok](https://github.com/videogame-hacker/Wonseok) &ndash; A modification for Minecraft to allow Korean text entry in its GUI.
+- [Koffee](https://github.com/char/Koffee) &ndash; A programmable JVM bytecode assembler with macros-for-free via Kotlin.
+- [Aksara](https://github.com/char/Aksara) &ndash; A standalone JVM bytecode assembler.
+- [Wonseok](https://github.com/char/Wonseok) &ndash; A modification for Minecraft to allow Korean text entry in its GUI.
 - [Type!](https://type.o-w-o.icu/) &ndash; A minimalist, multilingual typing test website.
 - [side](https://side.alloc.tech) &ndash; A static-site generator written using [deno](https://deno.land/).
 - [sipy](https://sipy.hackery.site) &ndash; A static-site generator inspired by side, using Python.
-- [wg-manage](https://github.com/videogame-hacker/wg-manage) &ndash; A bring-your-own frontend VPN tunnel management system for WireGuard.
-- [Starboard](https://github.com/videogame-hacker/starboard) &ndash; A personal link aggregator for interesting code projects.
-- [ssh-lockbox](https://github.com/videogame-hacker/ssh-lockbox) &ndash; A personal central store for SSH keys, with automatic key deployment to Git forges.
+- [wg-manage](https://github.com/char/wg-manage) &ndash; A bring-your-own frontend VPN tunnel management system for WireGuard.
+- [Starboard](https://github.com/char/starboard) &ndash; A personal link aggregator for interesting code projects.
+- [ssh-lockbox](https://github.com/char/ssh-lockbox) &ndash; A personal central store for SSH keys, with automatic key deployment to Git forges.
 
 </section>
 <section id="languages-section">
